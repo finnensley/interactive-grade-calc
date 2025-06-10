@@ -20,5 +20,15 @@ function assignGrade(average) {
 
 // get the user input, prompt
 
+const scores = [];
+for (let i = 0; i < 3; i++) {
+    const score = prompt(`Enter Score ${i + 1}:`);
+    scores.push(parseInt(score));
+}
+
+const average = calculateAverage(...scores);
+const grade = assignGrade(average);
 
 // display the results, console.log
+console.log(`Average Grade: ${average}`);
+console.log(`Final Grade: ${grade}`);
